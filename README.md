@@ -46,7 +46,7 @@ Hemos utilizado la plataforma principalmente para el control de versiones y para
 
 * JIRA  : Esta plataforma de gestión de proyectos y seguimiento, siguiendo la metodología Scrum hemos planificado  realizar un seguimiento del progreso de nuestro proyecto. Donde podemos crear y asignar tareas y seguir su estado, lo que nos permite mantener una visibilidad completa del progreso del proyecto. Esta plataforma nos ha ayudado en gran medida para distribuir con eficiencia los trabajos a realizar y la participación equilabrada del equipo. 
 <br>
- [Nuestra Planificación](https://acdwcwcw.atlassian.net/jira/software/projects/COC/boards/2)
+      [Nuestra Planificación](https://acdwcwcw.atlassian.net/jira/software/projects/COC/boards/2)
 
 <br>
 
