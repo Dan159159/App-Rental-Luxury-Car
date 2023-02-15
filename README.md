@@ -40,7 +40,7 @@ Aunque la aplicación se encuentra en fase alfa, hay algunas características pl
 
 * Github : 
 Hemos utilizado la plataforma principalmente para el control de versiones y para trabajar juntos en el proyecto de manera eficiente y organizada.  Empezamos con la creación de un repositorio con las personas integrantes, y añadiendo una rama independiente para cada participante. Git nos permite compartir y alojar nuestro código, seguir el progreso del proyecto y discutir soluciones a problemas técnicos con el resto de comapñeros. También ofrece herramientas útiles para garantizar la calidad del código, como la revisión del mismo, las pruebas automatizadas y evitar en la medida de lo posible conflictos en los archivos.<br>
-[Nuestro Organizacion donde están los repositorios](https://github.com/Proyecto-Reservas-Coches)
+ [Nuestro Organizacion donde están los repositorios](https://github.com/Proyecto-Reservas-Coches)
 
 <br>
 
