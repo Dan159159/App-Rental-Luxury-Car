@@ -59,7 +59,7 @@ IntelliJ tiene una interfaz de usuario intuitiva y fácil de usar, eso nos ayuda
 
 ## To do
 
-* En la apliaciones sera obligatorio registrase o loggearse.
+* En la apliacion sera obligatorio registrase o loggearse.
 
 * Recomendar coches similares una vez que cojas un coche y no este disponible.
 
