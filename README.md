@@ -55,3 +55,15 @@ IntelliJ tiene una interfaz de usuario intuitiva y fácil de usar, eso nos ayuda
 <br>En ella hemos trabajado con en la aparte del backend con JavaFX y en la interfaz hemos utilizado SceneBuilder, que facilita la creación de interfaces, algunas de sus características han sido fundamentales así como la creación de componentes gráficos: botones, menús... y manipulación de eventos.
 
 <br>
+
+
+## To do
+
+* En la apliaciones sera obligatorio registrase o loggearse.
+
+* Recomendar coches similares una vez que cojas un coche y no este disponible.
+
+* Seleccion de seguros para el servicio. 
+
+* Pagina de "Help" ayudaremos con un telefono y contacto de gmail. (podria ser un formulario, para que explicaras cual es tu problema. Se te enviara una respuesta a tu email).
+
