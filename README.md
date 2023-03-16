@@ -1,4 +1,11 @@
 # DOCUMENTACIÓN
+
+
+
+
+
+
+
 ##  Descripción general:
 La aplicación de alquiler de coches en fase alfa es una plataforma en línea diseñada para permitir a los usuarios alquilar coches de forma sencilla y rápida. La aplicación se encuentra en una fase alfa, lo que significa que aún está en desarrollo y no cuenta con todas las funciones y características que estarán disponibles en su versión final.
 ## Funciones y características actuales:
