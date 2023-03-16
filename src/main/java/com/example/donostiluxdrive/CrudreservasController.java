@@ -2,8 +2,7 @@ package com.example.donostiluxdrive;
 
 import clases.CrudReserva;
 import clases.Crudcoche;
-import clases.Reserva;
-import com.example.donostiluxdrive.admin.Conexion;
+import clases.Conexion;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -17,10 +16,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -111,7 +108,7 @@ public class CrudreservasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Conexion conexion = new Conexion();
-        conexion.establecerConexion();
+        conexion.setConnection();
 
         //Inicializar listas
         listaReserva = FXCollections.observableArrayList();
@@ -128,7 +125,7 @@ public class CrudreservasController implements Initializable {
         tefColumn.setCellValueFactory(cellData -> cellData.getValue().telefonoClienteProperty());
         precioToalColumn.setCellValueFactory(cellData -> cellData.getValue().precioTotalProperty().asObject());
         gestionarEventos();
-        conexion.cerrarConexion();
+        conexion.closeConnection();
 
     }
     public void gestionarEventos(){

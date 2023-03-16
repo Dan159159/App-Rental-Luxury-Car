@@ -1,4 +1,4 @@
-package com.example.donostiluxdrive.admin;
+package clases;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,16 +6,16 @@ import java.sql.SQLException;
 
 public class Conexion {
     private Connection conexion;
-    private String url = "jdbc:mysql://192.168.1.152:3306/donostiluxdrive";
-    //private String url = "jdbc:mysql://localhost/donostiluxdrive";
+    //private String url = "jdbc:mysql://192.168.1.152:3306/donostiluxdrive";
+    private String url = "jdbc:mysql://localhost/donostiluxdrive";
 
-    private String usuario = "root";
-    private String contrasena = "";
+    private String user = "root";
+    private String password = "";
 
-    public void establecerConexion() {
+    public void setConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection(url, usuario, contrasena);
+            conexion = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -23,7 +23,7 @@ public class Conexion {
         }
     }
 
-    public void cerrarConexion() {
+    public void closeConnection() {
         try {
             if (conexion != null && !conexion.isClosed()) {
                 conexion.close();

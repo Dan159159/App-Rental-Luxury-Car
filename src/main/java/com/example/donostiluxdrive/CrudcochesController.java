@@ -3,7 +3,7 @@ package com.example.donostiluxdrive;
 
 
 import clases.Crudcoche;
-import com.example.donostiluxdrive.admin.Conexion;
+import clases.Conexion;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -11,7 +11,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -72,7 +71,7 @@ public class CrudcochesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Conexion conexion = new Conexion();
-        conexion.establecerConexion();
+        conexion.setConnection();
 
         //Inicializar listas
         listaCoChe = FXCollections.observableArrayList();
@@ -88,7 +87,7 @@ public class CrudcochesController implements Initializable {
         clmnPrecio.setCellValueFactory(cellData -> cellData.getValue().precioProperty().asObject());
 
         gestionarEventos();
-        conexion.cerrarConexion();
+        conexion.closeConnection();
     }
     public void gestionarEventos(){
         tblCoches.getSelectionModel().selectedItemProperty().addListener(
@@ -116,7 +115,7 @@ public class CrudcochesController implements Initializable {
     @FXML
     public void guardarRegistro(){
         Conexion conexion = new Conexion();
-        conexion.establecerConexion();
+        conexion.setConnection();
 
         //Crear una nueva instancia del tipo Alumno
         Crudcoche a = new Crudcoche(
@@ -127,9 +126,9 @@ public class CrudcochesController implements Initializable {
 
 
         //Llamar al metodo guardarRegistro de la clase Alumno
-        conexion.establecerConexion();
+        conexion.setConnection();
         int resultant = a.guardarRegistro(conexion.getConexion());
-        conexion.cerrarConexion();
+        conexion.closeConnection();
 
         if (resultant == 1){
             listaCoChe.add(a);
@@ -152,9 +151,9 @@ public class CrudcochesController implements Initializable {
                 colorLabel.getText(),
                 Integer.valueOf(precioLabel.getText()));
 
-        conexion.establecerConexion();
+        conexion.setConnection();
         int resultado = a.actualizarRegistro(conexion.getConexion());
-        conexion.cerrarConexion();
+        conexion.closeConnection();
 
         if (resultado == 1){
             listaCoChe.set(tblCoches.getSelectionModel().getSelectedIndex(),a);
@@ -170,9 +169,9 @@ public class CrudcochesController implements Initializable {
     @FXML
     public void eliminarRegistro(){
         Conexion conexion = new Conexion();
-        conexion.establecerConexion();
+        conexion.setConnection();
         int resultado = tblCoches.getSelectionModel().getSelectedItem().eliminarRegistro(conexion.getConexion());
-        conexion.cerrarConexion();
+        conexion.closeConnection();
 
         if (resultado == 1){
             listaCoChe.remove(tblCoches.getSelectionModel().getSelectedIndex());
