@@ -130,9 +130,9 @@ public class CrudReserva {
         this.precioTotal.set(precioTotal);
     }
 
-    public static void llenarInformacionReservas(Connection connection, ObservableList<CrudReserva> listaReserva){
+    public static void llenarInformacionReservas(Connection connectiondb, ObservableList<CrudReserva> listaReserva){
         try {
-            Statement instruccion = connection.createStatement();
+            Statement instruccion = connectiondb.createStatement();
             ResultSet resultado = instruccion.executeQuery(
                     "SELECT A.id," +
                             " A.id_coche, " +

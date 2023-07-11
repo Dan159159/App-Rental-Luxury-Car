@@ -2,7 +2,7 @@ package com.example.donostiluxdrive;
 
 import clases.CrudReserva;
 import clases.Crudcoche;
-import clases.Conexion;
+import clases.Connectiondb;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -107,13 +107,13 @@ public class CrudreservasController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Conexion conexion = new Conexion();
-        conexion.setConnection();
+        Connectiondb conn = new Connectiondb();
+        conn.setConnection();
 
         //Inicializar listas
         listaReserva = FXCollections.observableArrayList();
         //Llenar listas
-        CrudReserva.llenarInformacionReservas(conexion.getConexion(), listaReserva);
+        CrudReserva.llenarInformacionReservas(conn.getConnection(), listaReserva);
         //Enlazar listas con tablaView
         tblReserva.setItems(listaReserva);
         //Enlazar columnas con atributos
@@ -125,7 +125,7 @@ public class CrudreservasController implements Initializable {
         tefColumn.setCellValueFactory(cellData -> cellData.getValue().telefonoClienteProperty());
         precioToalColumn.setCellValueFactory(cellData -> cellData.getValue().precioTotalProperty().asObject());
         gestionarEventos();
-        conexion.closeConnection();
+        conn.closeConnection();
 
     }
     public void gestionarEventos(){

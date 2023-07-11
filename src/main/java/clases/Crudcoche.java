@@ -99,11 +99,11 @@ public class Crudcoche {
     }
 
 
-    public int guardarRegistro(Connection connection){
+    public int guardarRegistro(Connection connectiondb){
         try {
             //Evitar inyeccion SQL.
             PreparedStatement instruccion =
-                    connection.prepareStatement("INSERT INTO coches (marca, modelo, color, precioBase) "+
+                    connectiondb.prepareStatement("INSERT INTO coches (marca, modelo, color, precioBase) "+
                             "VALUES (?, ?, ?, ?)");
             instruccion.setString(1, modelo.get());
             instruccion.setString(2, marca.get());
@@ -116,10 +116,10 @@ public class Crudcoche {
         }
     }
 
-    public int actualizarRegistro(Connection connection){
+    public int actualizarRegistro(Connection connectiondb){
         try {
             PreparedStatement instruccion =
-                    connection.prepareStatement(
+                    connectiondb.prepareStatement(
                             "UPDATE coches "+
                                     " SET 	id = ?,  "+
                                     " marca = ?,  "+
@@ -140,9 +140,9 @@ public class Crudcoche {
         }
     }
 
-    public int eliminarRegistro(Connection connection){
+    public int eliminarRegistro(Connection connectiondb){
         try {
-            PreparedStatement instruccion = connection.prepareStatement(
+            PreparedStatement instruccion = connectiondb.prepareStatement(
                     "DELETE FROM coches "+
                             "WHERE id = ?"
             );
@@ -157,9 +157,9 @@ public class Crudcoche {
         }
     }
 
-    public static void llenarInformacionCoches(Connection connection, ObservableList<Crudcoche> listaCoChe){
+    public static void llenarInformacionCoches(Connection connectiondb, ObservableList<Crudcoche> listaCoChe){
         try {
-            Statement instruccion = connection.createStatement();
+            Statement instruccion = connectiondb.createStatement();
             ResultSet resultado = instruccion.executeQuery(
                     "SELECT id," +
                             " marca, " +

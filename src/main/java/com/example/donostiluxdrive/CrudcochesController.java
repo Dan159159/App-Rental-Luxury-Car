@@ -3,7 +3,7 @@ package com.example.donostiluxdrive;
 
 
 import clases.Crudcoche;
-import clases.Conexion;
+import clases.Connectiondb;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -13,7 +13,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
-import java.sql.Connection;
 import java.util.ResourceBundle;
 
 public class CrudcochesController implements Initializable {
@@ -61,7 +60,7 @@ public class CrudcochesController implements Initializable {
     @FXML
     private TableView<Crudcoche> tblCoches;
 
-    private Connection conexion;
+    private java.sql.Connection connection;
 
     private ObservableList<Crudcoche> listaCoChe;
 
@@ -70,13 +69,13 @@ public class CrudcochesController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Conexion conexion = new Conexion();
-        conexion.setConnection();
+        Connectiondb conn = new Connectiondb();
+        conn.setConnection();
 
         //Inicializar listas
         listaCoChe = FXCollections.observableArrayList();
         //Llenar listas
-        Crudcoche.llenarInformacionCoches(conexion.getConexion(), listaCoChe);
+        Crudcoche.llenarInformacionCoches(conn.getConnection(), listaCoChe);
         //Enlazar listas con tablaView
         tblCoches.setItems(listaCoChe);
         //Enlazar columnas con atributos
@@ -87,7 +86,7 @@ public class CrudcochesController implements Initializable {
         clmnPrecio.setCellValueFactory(cellData -> cellData.getValue().precioProperty().asObject());
 
         gestionarEventos();
-        conexion.closeConnection();
+        conn.closeConnection();
     }
     public void gestionarEventos(){
         tblCoches.getSelectionModel().selectedItemProperty().addListener(
@@ -114,8 +113,8 @@ public class CrudcochesController implements Initializable {
 
     @FXML
     public void guardarRegistro(){
-        Conexion conexion = new Conexion();
-        conexion.setConnection();
+        Connectiondb connectiondb = new Connectiondb();
+        connectiondb.setConnection();
 
         //Crear una nueva instancia del tipo Alumno
         Crudcoche a = new Crudcoche(
@@ -126,9 +125,9 @@ public class CrudcochesController implements Initializable {
 
 
         //Llamar al metodo guardarRegistro de la clase Alumno
-        conexion.setConnection();
-        int resultant = a.guardarRegistro(conexion.getConexion());
-        conexion.closeConnection();
+        connectiondb.setConnection();
+        int resultant = a.guardarRegistro(connectiondb.getConnection());
+        connectiondb.closeConnection();
 
         if (resultant == 1){
             listaCoChe.add(a);
@@ -143,7 +142,7 @@ public class CrudcochesController implements Initializable {
 
     @FXML
     public void actualizarRegistro(){
-        Conexion conexion = new Conexion();
+        Connectiondb connectiondb = new Connectiondb();
         Crudcoche a = new Crudcoche(
                 Integer.valueOf(idLabel.getText()),
                 marcaLabel.getText(),
@@ -151,9 +150,9 @@ public class CrudcochesController implements Initializable {
                 colorLabel.getText(),
                 Integer.valueOf(precioLabel.getText()));
 
-        conexion.setConnection();
-        int resultado = a.actualizarRegistro(conexion.getConexion());
-        conexion.closeConnection();
+        connectiondb.setConnection();
+        int resultado = a.actualizarRegistro(connectiondb.getConnection());
+        connectiondb.closeConnection();
 
         if (resultado == 1){
             listaCoChe.set(tblCoches.getSelectionModel().getSelectedIndex(),a);
@@ -168,10 +167,10 @@ public class CrudcochesController implements Initializable {
 
     @FXML
     public void eliminarRegistro(){
-        Conexion conexion = new Conexion();
-        conexion.setConnection();
-        int resultado = tblCoches.getSelectionModel().getSelectedItem().eliminarRegistro(conexion.getConexion());
-        conexion.closeConnection();
+        Connectiondb connectiondb = new Connectiondb();
+        connectiondb.setConnection();
+        int resultado = tblCoches.getSelectionModel().getSelectedItem().eliminarRegistro(connectiondb.getConnection());
+        connectiondb.closeConnection();
 
         if (resultado == 1){
             listaCoChe.remove(tblCoches.getSelectionModel().getSelectedIndex());

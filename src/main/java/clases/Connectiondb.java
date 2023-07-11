@@ -4,18 +4,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conexion {
-    private Connection conexion;
+public class Connectiondb {
+    private Connection conn;
     //private String url = "jdbc:mysql://192.168.1.152:3306/donostiluxdrive";
     private String url = "jdbc:mysql://localhost/donostiluxdrive";
 
     private String user = "root";
+
     private String password = "";
 
     public void setConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection(url, user, password);
+            conn = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -25,15 +26,15 @@ public class Conexion {
 
     public void closeConnection() {
         try {
-            if (conexion != null && !conexion.isClosed()) {
-                conexion.close();
+            if (conn != null && !conn.isClosed()) {
+                conn.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public Connection getConexion() {
-        return conexion;
+    public java.sql.Connection getConnection() {
+        return conn;
     }
 }

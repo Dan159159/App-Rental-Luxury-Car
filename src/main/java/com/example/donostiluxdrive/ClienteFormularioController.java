@@ -1,7 +1,7 @@
 package com.example.donostiluxdrive;
 
+import clases.Connectiondb;
 import clases.Reserva;
-import clases.database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -51,7 +51,7 @@ public class ClienteFormularioController {
             String query = "INSERT INTO reservas (id_coche, fechaIn, fechaFin, nombreCliente, apellidoCliente, emailCliente, telefonoCliente, precioTotal) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-            try (Connection conn = database.connectDb();
+            try (Connection conn = new Connectiondb().getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
                 stmt.setInt(1, reserva.getId_coche());
                 stmt.setDate(2, Date.valueOf(reserva.getFechaIn()));

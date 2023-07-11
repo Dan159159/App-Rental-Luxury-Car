@@ -1,7 +1,7 @@
 package com.example.donostiluxdrive;
 
 import clases.Coche;
-import clases.database;
+import clases.Connectiondb;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -57,8 +57,9 @@ public class FechaFormularioController {
                     "(fechaIn <= ? AND fechaFin >= ?) OR " +
                     "(fechaIn >= ? AND fechaFin <= ?))";
             cochesList = FXCollections.observableArrayList();
-
-            try (Connection conn = database.connectDb();
+            Connectiondb connectiondb = new Connectiondb();
+            connectiondb.setConnection();
+            try (Connection conn = new Connectiondb().getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
                 stmt.setDate(1, Date.valueOf(fechaIn));
                 stmt.setDate(2, Date.valueOf(fechaIn));
