@@ -65,11 +65,4 @@ public class MasInfoCoche {
         this.precio_base = precio_base;
     }
 
-    //MasInfoCoche coche1 = new MasInfoCoche("Ferrari", "812GTS", 600, "rojo", 1990, 1000);
-    //MasInfoCoche coche2 = new MasInfoCoche("Ferrari", "SF90STRADALE", 650, "rojo", 2002, 1200);
-    //MasInfoCoche coche3 = new MasInfoCoche("Rolls-Royce", "Spectre", 570, "amarillo", 2000, 1500);
-    //MasInfoCoche coche4 = new MasInfoCoche("Rolls-Royce", "Dawn", 550, "azul", 2005, 1100);
-    //MasInfoCoche coche5 = new MasInfoCoche("Bugatti", "Chiron", 600, "azul", 2010, 1550);
-    //MasInfoCoche coche6 = new MasInfoCoche("Mercedes", "AMGGT", 450, "gris", 2014, 1400);
-
 }

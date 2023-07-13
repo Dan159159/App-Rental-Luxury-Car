@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minWidth="1225.0" prefHeight="800.0" prefWidth="1225.0" style="-fx-min-width: 900px; -fx-min-height: 500;" styleClass="backgroundColor" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donostiluxdrive.LoginSignupController">
+<AnchorPane minWidth="1225.0" prefHeight="800.0" prefWidth="1225.0" style="-fx-min-width: 900px; -fx-min-height: 500;" styleClass="backgroundColor" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donostiluxdrive.LoginSignupController">
    <children>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -26,85 +26,95 @@
             </ImageView>
             <Pane prefHeight="817.0" prefWidth="1225.0" style="-fx-background-color: rgba(15, 15, 15, 0.9);">
                <children>
-                  <Pane layoutX="72.0" layoutY="198.0" prefHeight="561.0" prefWidth="1095.0" style="-fx-background-color: rgba(211, 216, 218, 0.2); -fx-background-radius: 8px;">
+                  <Pane id="signupPane" fx:id="signupPane" disable="true" layoutX="72.0" layoutY="198.0" prefHeight="561.0" prefWidth="999.0" style="-fx-background-color: rgba(211, 216, 218, 0.2); -fx-background-radius: 8px;" visible="false">
                      <children>
-                        <PasswordField fx:id="logContraTf" layoutX="783.0" layoutY="206.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Button fx:id="signUpButton" layoutX="499.0" layoutY="372.0" mnemonicParsing="false" onAction="#Signup" style="-fx-background-radius: 4px; -fx-border-radius: 4px;" styleClass="boton-inicio" stylesheets="@estilo.css" text="Sing Up" textFill="#9e4444">
+                           <font>
+                              <Font name="Noto Sans Condensed Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="132.0" layoutY="196.0" text="Nombre:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="signNombreTf" layoutX="321.0" layoutY="201.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Label layoutX="132.0" layoutY="243.0" text="Apellido:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="signEmailTf" accessibleRole="PASSWORD_FIELD" layoutX="321.0" layoutY="154.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Label layoutX="489.0" layoutY="64.0" text="Sign Up" textFill="#eeeeee" underline="true">
+                           <font>
+                              <Font name="Impact" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="149.0" text="Email:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="600.0" layoutY="149.0" text="Contraseña:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="signApellidoTf" accessibleRole="PASSWORD_FIELD" layoutX="321.0" layoutY="248.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Label layoutX="129.0" layoutY="296.0" text="Teléfono:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="signTelfTF" accessibleRole="PASSWORD_FIELD" layoutX="321.0" layoutY="301.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Label layoutX="600.0" layoutY="196.0" prefHeight="40.0" prefWidth="146.0" text="Confirmar:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="signContraTf" layoutX="764.0" layoutY="153.0" prefHeight="30.0" prefWidth="168.0" />
+                        <PasswordField fx:id="signConfirmarTf" layoutX="764.0" layoutY="201.0" prefHeight="30.0" prefWidth="168.0" />
                      </children></Pane>
-                  <ImageView fitHeight="126.0" fitWidth="123.0" layoutX="571.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="126.0" fitWidth="123.0" layoutX="570.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/LogoCorto.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="loginButton" layoutX="934.0" layoutY="463.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-radius: 7px; -fx-border-radius: 4px;" stylesheets="@estilo.css" text="Log in" textFill="#9e4444">
-                     <font>
-                        <Font name="Noto Sans Condensed Bold" size="21.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="boton-inicio" />
-                        <String fx:value="boton-log-in" />
-                     </styleClass>
-                  </Button>
-                  <Label layoutX="740.0" layoutY="340.0" text="Usuario:" textFill="#ededed">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="logEmailTf" layoutX="856.0" layoutY="344.0" prefHeight="30.0" prefWidth="168.0" />
-                  <Label layoutX="704.0" layoutY="399.0" text="Contraseña:" textFill="#eeeeee">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="894.0" layoutY="242.0" text="LOG IN" textFill="#9c4444" underline="true">
-                     <font>
-                        <Font name="Impact" size="40.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="signUpButton" layoutX="383.0" layoutY="639.0" mnemonicParsing="false" onAction="#Singup" style="-fx-background-radius: 4px; -fx-border-radius: 4px;" styleClass="boton-inicio" stylesheets="@estilo.css" text="Sing Up" textFill="#9e4444">
-                     <font>
-                        <Font name="Noto Sans Condensed Bold" size="21.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="198.0" layoutY="340.0" text="Nombre:" textFill="#eeeeee">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="singNombreTf" layoutX="310.0" layoutY="345.0" prefHeight="30.0" prefWidth="168.0" />
-                  <Label layoutX="198.0" layoutY="399.0" text="Apellido:" textFill="#eeeeee">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="singApellidoTf" accessibleRole="PASSWORD_FIELD" layoutX="310.0" layoutY="403.0" prefHeight="30.0" prefWidth="168.0" />
-                  <Label layoutX="333.0" layoutY="242.0" text="Sing Up" textFill="#eeeeee" underline="true">
-                     <font>
-                        <Font name="Impact" size="40.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="227.0" layoutY="458.0" text="Email:" textFill="#eeeeee">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="singEmailTf" accessibleRole="PASSWORD_FIELD" layoutX="310.0" layoutY="462.0" prefHeight="30.0" prefWidth="168.0" />
-                  <Label layoutX="164.0" layoutY="516.0" text="Contraseña:" textFill="#eeeeee">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="singContraTf" accessibleRole="PASSWORD_FIELD" layoutX="310.0" layoutY="521.0" prefHeight="30.0" prefWidth="168.0" />
-                  <Label layoutX="192.0" layoutY="575.0" text="Teléfono:" textFill="#eeeeee">
-                     <font>
-                        <Font name="Noto Sans Condensed" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="singTelfTF" accessibleRole="PASSWORD_FIELD" layoutX="310.0" layoutY="580.0" prefHeight="30.0" prefWidth="168.0" />
                   <Button fx:id="salirVentanaButton" layoutX="1088.0" layoutY="43.0" mnemonicParsing="false" onAction="#gotToInicio" prefHeight="45.0" prefWidth="79.0" style="-fx-background-radius: 4px; -fx-border-radius: 4px;" styleClass="boton-inicio" stylesheets="@estilo.css" text="Salir" textFill="#464646">
                      <font>
                         <Font name="Noto Sans Condensed Bold" size="18.0" />
                      </font>
                   </Button>
+                  <Pane id="signinPane" fx:id="loginPane" layoutX="82.0" layoutY="208.0" prefHeight="561.0" prefWidth="999.0" style="-fx-background-color: rgba(211, 216, 218, 0.2); -fx-background-radius: 8px;">
+                     <children>
+                        <PasswordField fx:id="logContraTf" layoutX="456.0" layoutY="188.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Button fx:id="loginButton" layoutX="493.0" layoutY="254.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-radius: 7px; -fx-border-radius: 4px;" stylesheets="@estilo.css" text="Log in" textFill="#9e4444">
+                           <font>
+                              <Font name="Noto Sans Condensed Bold" size="21.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="boton-inicio" />
+                              <String fx:value="boton-log-in" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="258.0" layoutY="129.0" text="Email:" textFill="#ededed">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="logEmailTf" layoutX="456.0" layoutY="134.0" prefHeight="30.0" prefWidth="168.0" />
+                        <Label layoutX="258.0" layoutY="183.0" text="Contraseña:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Noto Sans Condensed" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="490.0" layoutY="28.0" text="LOG IN" textFill="#9c4444" underline="true">
+                           <font>
+                              <Font name="Impact" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </children>

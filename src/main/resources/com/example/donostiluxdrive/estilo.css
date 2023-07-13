@@ -1,101 +1,86 @@
 
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+-fx-font-family: 'Ubuntu', sans-serif;
+//-fx-font-size: 15 px;
+}*/
+
+
 .titular{
-
-    -fx-background-color:linear-gradient(to left, #a57676 , #000000 );
-
-
+-fx-background-color:linear-gradient(to left, #a57676 , #000000 );
 }
+
 .sing-up{
 -fx-border-color: #9e4444;
 -fx-border-radius:4px;
 -fx-border-width:1.5px;
 }
-.ative{font-weight: bold;
-    border-bottom: solid red 2px;
+
+.active{
+font-weight: bold;
+border-bottom: solid red 2px;
 }
 
 .active{
-
-    -fx-border-width: 0 0 1.5px 0;
-    -fx-border-color: rgb(179, 46, 46);
-    -fx-border-style: solid;
+-fx-border-width: 0 0 1.5px 0;
+-fx-border-color: rgb(179, 46, 46);
+-fx-border-style: solid;
 }
+
 .boton-inicio{
-    -fx-background-color: #eeeeee;
-    -fx-transition-duration:0.3
-   
+-fx-background-color: #eeeeee;
+-fx-transition-duration:0.3
 }
-.boton-inicio:hover{-fx-background-color:linear-gradient(to left, #a57676, #9e4444);
-    -fx-text-fill:white;}
-   
 
+.boton-inicio:hover{
+-fx-background-color:linear-gradient(to left, #a57676, #9e4444);
+-fx-text-fill:white;
+}
 
-    .card-seguros{
+.card-seguros{
+-fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #bd3636, #460808);
+fx-border-width: 4px;
+}
 
-        -fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #bd3636, #460808);
+.card-seguros-estandar{
+-fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #821b1b, #953535);
+}
 
-    fx-border-width: 4px;
-
-    }
-
-    .card-seguros-estandar{
-
-                -fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #821b1b, #953535);
-
-
-    }
-
-
-     .card-seguros-a-todo-riesgo{
-
-
-                -fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #821b1b, #953535);
-
-
+.card-seguros-a-todo-riesgo{
+-fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #821b1b, #953535);
 -fx-border-width: 4px 4px 4px 4px;
-        -fx-border-color: #ffffff;
-        -fx-border-style: solid;
-        -fx-border-radius:4px;
+-fx-border-color: #ffffff;
+-fx-border-style: solid;
+-fx-border-radius:4px;
+}
 
-        }
-         .card-seguros-elite{
+.card-seguros-elite{
+-fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #821b1b, #953535);
+}
 
+.boton-inicio-riesgo{
+-fx-background-color: #eeeeee;
+-fx-border-width: 4px 4px 4px 4px;
+-fx-border-color: #6f1111;
+-fx-border-style: solid;
+}
 
-                -fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #821b1b, #953535);
+.boton-cerrar{
+-fx-border-width: 4px 4px 4px 4px;
+-fx-border-color: #681212;
+-fx-border-style: solid;
+}
 
+.boton-log-in{
+-fx-border-width: 4px 4px 4px 4px;
+-fx-border-color: #681212;
+-fx-border-style: solid;}
 
-
-
-                }
-
-        .boton-inicio-riesgo{
-            -fx-background-color: #eeeeee;
-
-
-        -fx-border-width: 4px 4px 4px 4px;
-        -fx-border-color: #6f1111;
-        -fx-border-style: solid;
-
-
-        }
-
-        .boton-cerrar{ -fx-border-width: 4px 4px 4px 4px;
-                              -fx-border-color: #681212;
-                              -fx-border-style: solid;}
-
-
-
-
-
-       .boton-log-in{ -fx-border-width: 4px 4px 4px 4px;
-                                     -fx-border-color: #681212;
-                                     -fx-border-style: solid;}
-
-
-                                     .card-title{
-
-                                     -fx-text-fill:white;}
-
-
-
-                                     .card-parrafo{-fx-line-height: 2px;}
+.card-title{
+-fx-text-fill:white;
+}
+.card-parrafo{
+-fx-line-height: 2px;
+}

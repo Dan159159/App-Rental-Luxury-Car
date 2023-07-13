@@ -16,21 +16,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class InicioController   {
-    
     @FXML
     private Button cochesButton;
-
     @FXML
     private Button cochesButtonNav;
-
     @FXML
     private Button inicioButtonNav;
-
     @FXML
     private Button segurosButtonNav;
-
     @FXML
     private Button signInButton;
+    @FXML
+    private Button signUpButton;
 
     @FXML
     void goToCoches()   {
@@ -77,16 +74,28 @@ public class InicioController   {
     }
 
     @FXML
-    public void goToSignIn()  {
+    public void goToSignin() {
+        goToSign(signInButton, false);
+    }
+
+    @FXML
+    public void goToSignup() {
+        goToSign(signUpButton, true);
+    }
+
+    public void goToSign(Button button, boolean show) {
+        LoginSignupController loginSignupController = LoginSignupController.getInstance();
+        loginSignupController.setSignUpBoolean(show);
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginSignup-view.fxml"));
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("LoginSignup-view.fxml"));
+            Parent root = loader.load();
             Scene scene = new Scene(root);
-            Stage stage = (Stage) signInButton.getScene().getWindow();
+            Stage stage = (Stage) button.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

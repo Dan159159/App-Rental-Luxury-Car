@@ -3,7 +3,6 @@ package clases;
 import java.time.LocalDate;
 
 public class Reserva {
-    //Declaracion de variables
         int id_reserva;
         int id_coche;
         LocalDate fechaIn;

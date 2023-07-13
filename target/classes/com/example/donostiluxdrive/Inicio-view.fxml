@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1300.0" styleClass="backgroundColor" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donostiluxdrive.InicioController">
+<AnchorPane prefHeight="750.0" prefWidth="1300.0" styleClass="backgroundColor" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donostiluxdrive.InicioController">
    <children>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -58,9 +58,14 @@
                         <Font name="Noto Sans Condensed Bold" size="21.0" />
                      </font>
                   </Button>
-                  <ButtonBar layoutX="956.0" layoutY="55.0" prefHeight="45.0" prefWidth="217.0">
+                  <ButtonBar layoutX="956.0" layoutY="55.0" prefHeight="45.0" prefWidth="250.0">
                      <buttons>
-                        <Button fx:id="signInButton" mnemonicParsing="false" onAction="#goToSignIn" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: none;" styleClass="sing-up" text="Sign in " textFill="#fcfcfc">
+                        <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#goToSignup" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: none;" styleClass="sing-up" text="Sign Up" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Noto Serif Condensed" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="signInButton" mnemonicParsing="false" onAction="#goToSignin" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: none;" styleClass="sing-up" text="Sign in " textFill="#fcfcfc">
                            <font>
                               <Font name="Noto Serif Condensed" size="20.0" />
                            </font>
