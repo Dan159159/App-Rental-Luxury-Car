@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donostiluxdrive.ClienteFormularioController">
+   <children>
+      <Label layoutX="149.0" layoutY="108.0" text="Nombre :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="147.0" text="Apellido :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="187.0" text="Email :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="225.0" text="Teléfono :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreField" layoutX="278.0" layoutY="109.0" />
+      <TextField fx:id="apellidoField" layoutX="278.0" layoutY="148.0" />
+      <TextField fx:id="emailField" layoutX="278.0" layoutY="188.0" />
+      <TextField fx:id="telefonoField" layoutX="278.0" layoutY="226.0" />
+      <Button fx:id="confirmarButton" layoutX="265.0" layoutY="303.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
+   </children>
+</AnchorPane>

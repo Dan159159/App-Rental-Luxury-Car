@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="750.0" prefWidth="1300.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donostiluxdrive.CochesController">
+   <content>
+      <AnchorPane prefHeight="1000.0" prefWidth="1280.0" style="-fx-background-color: rgba(15, 15, 15, 0.651);" stylesheets="@estilo.css">
+         <children>
+            <ImageView fitHeight="1111.0" fitWidth="1284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/fondo-coches.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="1000.0" prefWidth="1285.0" style="-fx-background-color: rgba(15, 15, 15, 0.851);">
+               <children>
+                  <Text layoutX="148.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo" text="COCHES">
+                     <font>
+                        <Font name="Impact" size="77.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.5098039507865906" green="0.10588235408067703" blue="0.10588235408067703" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5799999833106995" green="0.20880000293254852" blue="0.20880000293254852" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+               </children></Pane>
+            <ButtonBar layoutX="131.0" layoutY="55.0" prefHeight="47.0" prefWidth="360.0">
+               <buttons>
+                  <Button fx:id="inicioButtonNav" mnemonicParsing="false" onAction="#goToInicio" style="-fx-background-color: #252525;" text="Inicio" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Noto Serif Condensed" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cochesButtonNav" graphicTextGap="10.0" mnemonicParsing="false" onAction="#goToCoches" style="-fx-background-color: #252525;" styleClass="active" text="Coches" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Noto Serif Condensed Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="segurosButtonNav" mnemonicParsing="false" onAction="#goToSeguros" prefWidth="132.0" style="-fx-background-color: #252525;" text="Seguros" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Noto Serif Condensed" size="20.0" />
+                     </font>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+            <ImageView fitHeight="101.0" fitWidth="95.0" layoutX="47.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/LogoCorto.png" />
+               </image>
+            </ImageView>
+            <ButtonBar layoutX="920.0" layoutY="55.0" prefHeight="45.0" prefWidth="220.0">
+               <buttons>
+                  <Button mnemonicParsing="false" onAction="#goToReserva" prefHeight="45.0" prefWidth="144.0" style="-fx-background-color: none;" styleClass="sing-up" text="ALQUILAR!" textFill="#fcfcfc">
+                     <font>
+                        <Font name="Noto Serif Condensed" size="20.0" />
+                     </font>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+            <GridPane hgap="15.0" layoutX="152.0" layoutY="245.0" prefHeight="1169.0" prefWidth="988.0" stylesheets="@estilo.css" vgap="15.0" AnchorPane.bottomAnchor="-414.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="245.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="338.0" minHeight="10.0" prefHeight="338.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="340.0" minHeight="10.0" prefHeight="262.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="282.0" style="-fx-background-color: rgba(211, 216, 218, 0.1); -fx-background-radius: 8px;" styleClass="vbox" stylesheets="@estilo.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" styleClass=".image-view">
+                           <image>
+                              <Image url="@../../../img/ferrari812GTSS.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="177.0" stylesheets="@estilo.css" text="Ferrari 812GTS" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Impact" size="23.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="282.0" stylesheets="@estilo.css" text="Ferrari 812GTS es un deportivo de lujo que combina elegancia, rendimiento y tecnología de vanguardia." textFill="#808080" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Serif Condensed" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="card-text" />
+                                    <String fx:value="card-parrafo" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="alquilarCoche0_0Button" mnemonicParsing="false" onAction="#goToReserva" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #9e3d3d; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-background-radius: 7px;" text="ALQUILAR!" textFill="#722424">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="infoCoche1Button" mnemonicParsing="false" onAction="#goToInfoCoche" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #697cd0; -fx-background-radius: 8px; -fx-border-radius: 4px; -fx-border-width: 2px;" styleClass="borton-info" text="VER MÁS INFO" textFill="#303c72">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="282.0" style="-fx-background-color: rgba(211, 216, 218, 0.1); -fx-background-radius: 8px;" styleClass="vbox" stylesheets="@estilo.css" GridPane.columnIndex="2">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" styleClass=".image-view">
+                           <image>
+                              <Image url="@../../../img/roll-spectre.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="233.0" stylesheets="@estilo.css" text="Rolls Royce SPECTRE" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Impact" size="23.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="282.0" stylesheets="@estilo.css" text="Rolls-Royce Ghost ofrece una combinación única de elegancia, confort y tecnología avanzada. " textFill="#808080" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Serif Condensed" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="card-text" />
+                                    <String fx:value="card-parrafo" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="alquilarCoche2_0Button" mnemonicParsing="false" onAction="#goToReserva" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #9e3d3d; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-background-radius: 7px;" text="ALQUILAR!" textFill="#722424">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="infoCoche3Button" mnemonicParsing="false" onAction="#goToInfoCoche" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #697cd0; -fx-background-radius: 8px; -fx-border-radius: 4px; -fx-border-width: 2px;" styleClass="borton-info" text="VER MÁS INFO" textFill="#303c72">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="282.0" style="-fx-background-color: rgba(211, 216, 218, 0.1); -fx-background-radius: 8px;" styleClass="vbox" stylesheets="@estilo.css" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" styleClass=".image-view">
+                           <image>
+                              <Image url="@../../../img/Ferrari%20SF90STRADALE.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="221.0" stylesheets="@estilo.css" text="Ferrari SF90 STRADALE" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Impact" size="23.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="282.0" stylesheets="@estilo.css" text="Ferrari SF90 Stradale es un superdeportivo híbrido de alta tecnología. Con un motor V8." textFill="#808080" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Serif Condensed" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="card-text" />
+                                    <String fx:value="card-parrafo" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="alquilarCoche1_0Button" mnemonicParsing="false" onAction="#goToReserva" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #9e3d3d; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-background-radius: 7px;" text="ALQUILAR!" textFill="#722424">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="infoCoche2Button" mnemonicParsing="false" onAction="#goToInfoCoche" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #697cd0; -fx-background-radius: 8px; -fx-border-radius: 4px; -fx-border-width: 2px;" styleClass="borton-info" text="VER MÁS INFO" textFill="#303c72">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="307.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="328.0" prefWidth="283.0" style="-fx-background-color: rgba(211, 216, 218, 0.1); -fx-background-radius: 8px;" styleClass="vbox" stylesheets="@estilo.css" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" styleClass=".image-view">
+                           <image>
+                              <Image url="@../../../img/rolls-royce-dawn.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="177.0" stylesheets="@estilo.css" text="RollsRoyce DAWN" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Impact" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="TOP_LEFT" prefHeight="74.0" prefWidth="262.0" stylesheets="@estilo.css" text="Rolls-Royce Dawn es un automóvil de lujo convertible que combina elegancia y confort con un estilo atrevído." textFill="#808080" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Serif Condensed" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="card-text" />
+                                    <String fx:value="card-parrafo" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="alquilarCoche0_1Button" mnemonicParsing="false" onAction="#goToReserva" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #9e3d3d; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-background-radius: 7px;" text="ALQUILAR!" textFill="#722424">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="infoCoche4Button" mnemonicParsing="false" onAction="#goToInfoCoche" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #697cd0; -fx-background-radius: 8px; -fx-border-radius: 4px; -fx-border-width: 2px;" styleClass="borton-info" text="VER MÁS INFO" textFill="#303c72">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="325.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="282.0" style="-fx-background-color: rgba(211, 216, 218, 0.1); -fx-background-radius: 8px;" styleClass="vbox" stylesheets="@estilo.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" styleClass=".image-view">
+                           <image>
+                              <Image url="@../../../img/Bugattichiron.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="177.0" stylesheets="@estilo.css" text="Bugatti Chiron" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Impact" size="23.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="282.0" stylesheets="@estilo.css" text="El Bugatti Chiron es el superdeportivo más avanzado y potente de la historia. Con un motor W16 de 1.500 caballos" textFill="#808080" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Serif Condensed" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="card-text" />
+                                    <String fx:value="card-parrafo" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="alquilarCoche1_1Button" mnemonicParsing="false" onAction="#goToReserva" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #9e3d3d; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-background-radius: 7px;" text="ALQUILAR!" textFill="#722424">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="infoCoche5Button" mnemonicParsing="false" onAction="#goToInfoCoche" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #697cd0; -fx-background-radius: 8px; -fx-border-radius: 4px; -fx-border-width: 2px;" styleClass="borton-info" text="VER MÁS INFO" textFill="#303c72">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="325.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="282.0" style="-fx-background-color: rgba(211, 216, 218, 0.1); -fx-background-radius: 8px;" styleClass="vbox" stylesheets="@estilo.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" styleClass=".image-view">
+                           <image>
+                              <Image url="@../../../img/mercedes-AMG-GT.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="28.0" prefWidth="177.0" stylesheets="@estilo.css" text="Mercedes AMG GT" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Impact" size="23.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="282.0" stylesheets="@estilo.css" text="La AMG GT es el deportivo de lujo perfecto para aquellos que buscan una combinación única de rendimiento." textFill="#808080" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Serif Condensed" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="card-text" />
+                                    <String fx:value="card-parrafo" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="alquilarCoche2_1Button" mnemonicParsing="false" onAction="#goToReserva" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #9e3d3d; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-background-radius: 7px;" text="ALQUILAR!" textFill="#722424">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="infoCoche6Button" mnemonicParsing="false" onAction="#goToInfoCoche" prefHeight="25.0" prefWidth="220.0" style="-fx-border-color: #697cd0; -fx-background-radius: 8px; -fx-border-radius: 4px; -fx-border-width: 2px;" styleClass="borton-info" text="VER MÁS INFO" textFill="#303c72">
+                                 <font>
+                                    <Font name="Impact" size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
